@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAECO - Trafalgar Energy Company | Investment Opportunity</title>
+  <meta name="description" content="TAECO develops large-scale energy storage terminals in Saudi Arabia. SAR 180M equity investment opportunity in Yanbu Terminal - 2.3M cbm capacity, 20.5% IRR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --secondary: #3b82f6;
+      --accent: #f59e0b;
+      --accent-light: #fbbf24;
+      --success: #10b981;
+      --dark: #020617;
+      --text: #f8fafc;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border: rgba(148, 163, 184, 0.15);
+      --card-bg: #ffffff;
+      --glass: rgba(255, 255, 255, 0.95);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      padding: 4rem 0 5rem;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .company-logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .tagline {
+      font-size: 1.375rem;
+      color: #cbd5e1;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .investment-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(245, 158, 11, 0.95);
+      border: none;
+      border-radius: 50px;
+      padding: 1rem 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 1.125rem;
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.625rem 1.25rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 0.9375rem;
+    }
+
+    .nav-links a:hover {
+      background: var(--secondary);
+      color: #ffffff;
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 1.5rem auto 0;
+      line-height: 1.8;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+      border-color: var(--secondary);
+    }
+
+    .card-icon {
+      font-size: 2.75rem;
+      color: var(--secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .card-content {
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .card-content strong {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    /* Image Cards */
+    .image-card {
+      position: relative;
+      height: 100%;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .image-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%);
+    }
+
+    .image-card-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #ffffff;
+    }
+
+    .image-card-content h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .image-card-content p {
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    /* Financial Tables */
+    .table-container {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 3rem 0;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .table-container h3 {
+      margin-bottom: 2rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .financial-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .financial-table th {
+      background: var(--primary);
+      color: white;
+      padding: 1.125rem 1.25rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      letter-spacing: 0.025em;
+    }
+
+    .financial-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-dark);
+      font-size: 0.9375rem;
+    }
+
+    .financial-table tbody tr:hover {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .amount {
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .positive {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .negative {
+      color: #ef4444;
+      font-weight: 700;
+    }
+
+    /* Key Metrics */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, var(--secondary) 0%, #2563eb 100%);
+      border: none;
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    }
+
+    .metric-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .metric-value {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ffffff;
+      display: block;
+      margin-bottom: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .metric-label {
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.875rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 4rem 0;
+      padding: 0 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--secondary) 0%, var(--accent) 100%);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 3rem 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-content {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      width: calc(50% - 3rem);
+      position: relative;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .timeline-date {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.075em;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin: 0.5rem 0 0.75rem;
+      color: var(--primary);
+    }
+
+    .timeline-content p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      border: 4px solid #f8fafc;
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+      z-index: 2;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 24px;
+      padding: 5rem 3rem;
+      text-align: center;
+      margin: 5rem 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+      color: white;
+    }
+
+    .cta-subtitle {
+      font-size: 1.375rem;
+      color: #cbd5e1;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 1.125rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.125rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    .cta-button:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      padding: 3rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .footer-content {
+      color: #cbd5e1;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .contact-item i {
+      color: var(--accent);
+      font-size: 1.125rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .company-logo {
+        font-size: 2.5rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 0.375rem;
+      }
+
+      .nav-links a {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.875rem;
+      }
+
+      .timeline::before {
+        left: 1.5rem;
+      }
+
+      .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 4rem;
+      }
+
+      .timeline-content {
+        width: 100%;
+      }
+
+      .timeline-marker {
+        left: 1.5rem;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-title {
+        font-size: 2rem;
+      }
+
+      .cta-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* Scroll animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1 class="company-logo">TAECO</h1>
+        <p class="tagline">Trafalgar Energy Company</p>
+        <div class="investment-highlight">
+          <i class="fas fa-chart-line"></i>
+          <span>SAR 180M Investment Opportunity | 20.5% IRR</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#project">Project Details</a></li>
+        <li><a href="#financials">Financials</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#team">Leadership</a></li>
+        <li><a href="#investment">Investment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="overview" class="animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Executive Summary</h2>
+          <p class="section-subtitle">
+            TAECO is developing large-scale energy storage terminals starting at King Fahd Industrial Port, Yanbu — 
+            a strategic Red Sea location serving 13% of global maritime trade, supporting Saudi Vision 2030.
+          </p>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">2.3M</span>
+            <span class="metric-label">Cubic Meters Capacity</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">99</span>
+            <span class="metric-label">Storage Tanks</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">393K</span>
+            <span class="metric-label">m² Land Size</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">20.5%</span>
+            <span class="metric-label">Project IRR</span>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card image-card" style="background-image: url('https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?auto=format&fit=crop&w=800&q=80');">
+            <div class="image-card-content">
+              <i class="fas fa-map-marker-alt card-icon"></i>
+              <h3 class="card-title">Strategic Location</h3>
+              <div class="card-content">
+                King Fahd Industrial Port, Yanbu serves 13% of global maritime trade on the Red Sea corridor. 
+                Prime position for energy exports and regional distribution.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-eye card-icon"></i>
+            <h3 class="card-title">Vision 2030 Alignment</h3>
+            <div class="card-content">
+              Supports industrial diversification, energy logistics efficiency, and attracts foreign investment 
+              in line with Saudi Arabia's national transformation goals.
+            </div>
+          </div>
+
+          <div class="card image-card" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');">
+            <div class="image-card-content">
+              <i class="fas fa-oil-can card-icon"></i>
+              <h3 class="card-title">Comprehensive Services</h3>
+              <div class="card-content">
+                Storage, throughput, and ancillary services for fuel oil, diesel, gasoline, LPG, kerosene, 
+                chemicals, and lubricants with modern infrastructure.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Yanbu Terminal Project</h2>
+          <p class="section-subtitle">
+            Phased development approach ensuring controlled risk and scalable expansion
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card image-card" style="background-image: url('https://images.unsplash.com/photo-1581093458791-9d42e300b3f2?auto=format&fit=crop&w=800&q=80');">
+            <div class="image-card-content">
+              <i class="fas fa-industry card-icon"></i>
+              <h3 class="card-title">Phase 1a/b</h3>
+              <div class="card-content">
+                <strong>33 tanks | 705,000 cbm capacity</strong><br>
+                CAPEX: SAR 1.06 Billion<br>
+                Foundation phase with core infrastructure and initial capacity
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-expand-arrows-alt card-icon"></i>
+            <h3 class="card-title">Phase 1c/2</h3>
+            <div class="card-content">
+              <strong>66 tanks | 1.37M cbm capacity</strong><br>
+              CAPEX: SAR 2.07 Billion<br>
+              Expansion to full capacity, maximizing economies of scale
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-cogs card-icon"></i>
+            <h3 class="card-title">Advanced Infrastructure</h3>
+            <div class="card-content">
+              Dedicated pipelines, truck gantries, blending systems, nitrogen blanketing, 
+              and AI-driven smart monitoring systems
+            </div>
+          </div>
+
+          <div class="card image-card" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80');">
+            <div class="image-card-content">
+              <i class="fas fa-leaf card-icon"></i>
+              <h3 class="card-title">Sustainability Focus</h3>
+              <div class="card-content">
+                Zero-waste targets, renewable energy integration, emission control systems, 
+                and green compliance protocols
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="financials" class="animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Financial Highlights</h2>
+          <p class="section-subtitle">
+            Strong financial projections with attractive returns and sustainable growth
+          </p>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">SAR 3.13B</span>
+            <span class="metric-label">Total CAPEX</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">SAR 180M</span>
+            <span class="metric-label">Equity Investment Phase 1a</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">70/30</span>
+            <span class="metric-label">Debt/Equity Ratio</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">19.2%</span>
+            <span class="metric-label">Equity IRR</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">72%</span>
+            <span class="metric-label">EBITDA Margin (FY30)</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">69.5%</span>
+            <span class="metric-label">Net Profit Margin (2044)</span>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <h3 style="margin-bottom: 1.5rem; color: var(--text);">Financial Projections</h3>
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Revenue (SAR mn)</th>
+                <th>EBITDA (SAR mn)</th>
+                <th>Net Income (SAR mn)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2028</td>
+                <td class="amount">94.8</td>
+                <td class="amount">55.7</td>
+                <td class="amount negative">-16.2</td>
+              </tr>
+              <tr>
+                <td>2030</td>
+                <td class="amount">194.7</td>
+                <td class="amount">139.4</td>
+                <td class="amount positive">8.5</td>
+              </tr>
+              <tr>
+                <td>2032</td>
+                <td class="amount">217.1</td>
+                <td class="amount">159.3</td>
+                <td class="amount positive">4.9</td>
+              </tr>
+              <tr>
+                <td>2034</td>
+                <td class="amount">382.8</td>
+                <td class="amount">309.7</td>
+                <td class="amount positive">71.1</td>
+              </tr>
+              <tr>
+                <td>2036</td>
+                <td class="amount">920.2</td>
+                <td class="amount">805.1</td>
+                <td class="amount positive">410.8</td>
+              </tr>
+              <tr>
+                <td>2040</td>
+                <td class="amount">1,030.1</td>
+                <td class="amount">903.5</td>
+                <td class="amount positive">622.6</td>
+              </tr>
+              <tr>
+                <td>2044</td>
+                <td class="amount">1,115.1</td>
+                <td class="amount">971.8</td>
+                <td class="amount positive">774.4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <i class="fas fa-chart-line card-icon"></i>
+            <h3 class="card-title">Payback Analysis</h3>
+            <div class="card-content">
+              <strong>Equity Payback: 7-8 years from operation start</strong><br>
+              Net income turns positive by 2030 (SAR 8.5M)<br>
+              Full payback achieved between 2035-2036<br>
+              Annual profits exceed SAR 400M after 2036
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-trending-up card-icon"></i>
+            <h3 class="card-title">Market Drivers</h3>
+            <div class="card-content">
+              Regional oil trade growth: 6.4% CAGR<br>
+              Refinery expansion in Yanbu and Jizan<br>
+              Shortage of modern Red Sea storage capacity<br>
+              Increasing demand for energy logistics
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-trophy card-icon"></i>
+            <h3 class="card-title">Competitive Edge</h3>
+            <div class="card-content">
+              One of the largest independent storage providers in GCC<br>
+              2.27 million cbm total capacity after completion<br>
+              Strategic partnerships with Aramco, Shell, Trafigura, Glencore<br>
+              Advanced technology integration
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Project Timeline</h2>
+          <p class="section-subtitle">
+            Clear milestones and deliverables ensuring timely execution
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">Completed</div>
+              <h3 class="timeline-title">Feasibility & Design</h3>
+              <p>Feasibility study by PwC and design by K&T completed with positive results</p>
+            </div>
+            <div class="timeline-marker"></div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">In Progress</div>
+              <h3 class="timeline-title">Regulatory Approvals</h3>
+              <p>NCEC, RCJY, and HCIS approvals underway with expected completion soon</p>
+            </div>
+            <div class="timeline-marker"></div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">Q1 2027</div>
+              <h3 class="timeline-title">Construction Start</h3>
+              <p>Phase 1a construction begins with initial 33-tank development</p>
+            </div>
+            <div class="timeline-marker"></div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2028-2030</div>
+              <h3 class="timeline-title">Phase 1 Operations</h3>
+              <p>Commercial operations begin with revenue generation and capacity ramp-up</p>
+            </div>
+            <div class="timeline-marker"></div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2030+</div>
+              <h3 class="timeline-title">Phase 2 Expansion</h3>
+              <p>Full capacity development and market leadership establishment</p>
+            </div>
+            <div class="timeline-marker"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Leadership Team</h2>
+          <p class="section-subtitle">
+            Experienced executives with proven track records in energy, infrastructure, and finance
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <i class="fas fa-user-tie card-icon"></i>
+            <h3 class="card-title">Eng. Thabet Al Sawyeed</h3>
+            <div class="card-content">
+              <strong>Chief Executive Officer</strong><br>
+              Former Governor, Saudi Contractors Authority<br>
+              25+ years in engineering leadership and project management
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-cogs card-icon"></i>
+            <h3 class="card-title">Eng. Charlo Marston</h3>
+            <div class="card-content">
+              <strong>Chief Operating Officer</strong><br>
+              30+ years in terminal operations<br>
+              Former executive at ENOC and Horizon Terminals
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-chart-pie card-icon"></i>
+            <h3 class="card-title">Casey Blatch</h3>
+            <div class="card-content">
+              <strong>Chief Financial Officer</strong><br>
+              Ex-Almarai and PwC executive<br>
+              Specialist in capital structuring and investor relations
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-handshake card-icon"></i>
+            <h3 class="card-title">Eng. Ahmad Alaboudi</h3>
+            <div class="card-content">
+              <strong>Chief Investment Officer</strong><br>
+              Expertise in strategic partnerships<br>
+              Downstream logistics and business development
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-users card-icon"></i>
+            <h3 class="card-title">Mufleh Aljabrah</h3>
+            <div class="card-content">
+              <strong>Chief Strategy & Sustainability Officer</strong><br>
+              HR and governance strategist<br>
+              Public and private sector experience
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="investment" class="animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Investment Proposition</h2>
+          <p class="section-subtitle">
+            High-return opportunity in Saudi Arabia's fastest-growing energy infrastructure sector
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <i class="fas fa-rocket card-icon"></i>
+            <h3 class="card-title">Early Entry Advantage</h3>
+            <div class="card-content">
+              First-mover advantage in high-demand Red Sea energy corridor with limited competition 
+              and growing regional trade volumes.
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-shield-alt card-icon"></i>
+            <h3 class="card-title">Predictable Revenue</h3>
+            <div class="card-content">
+              Long-term contracted revenue streams with established partners providing 
+              stable cash flows and reduced market risk.
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-percentage card-icon"></i>
+            <h3 class="card-title">High Profitability</h3>
+            <div class="card-content">
+              72% EBITDA margins by 2030 and 69.5% net profit margins by 2044 
+              demonstrating exceptional operational efficiency.
+            </div>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-expand card-icon"></i>
+            <h3 class="card-title">Scalable Model</h3>
+            <div class="card-content">
+              Phased expansion approach enables controlled growth and additional 
+              investment opportunities in subsequent phases.
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-section">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Invest?</h2>
+            <p class="cta-subtitle">
+              Join us in building Saudi Arabia's premier energy storage infrastructure
+            </p>
+            <a href="mailto:mabdulfattah@calx.sa?subject=Investment%20Inquiry%20-%20TAECO%20Yanbu%20Terminal" class="cta-button">
+              <i class="fas fa-envelope"></i>
+              Contact Investment Team
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>mabdulfattah@calx.sa</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+966 599 343 529</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Riyadh, Saudi Arabia</span>
+        </div>
+      </div>
+      <div class="footer-content">
+        <p>&copy; 2025 Trafalgar Energy Company (TAECO). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Add visible class to first section immediately
+    document.querySelector('section').classList.add('visible');
+
+    // Active navigation highlighting
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Add some interactive number counting animation
+    function animateNumbers() {
+      const metrics = document.querySelectorAll('.metric-value');
+      
+      metrics.forEach(metric => {
+        const finalValue = metric.textContent;
+        const isPercentage = finalValue.includes('%');
+        const isMoney = finalValue.includes('SAR');
+        const isRatio = finalValue.includes('/');
+        
+        if (!isNaN(parseFloat(finalValue)) || isPercentage || isRatio) {
+          // Simple animation for demo purposes
+          metric.style.opacity = '0';
+          setTimeout(() => {
+            metric.style.opacity = '1';
+            metric.style.transition = 'opacity 0.8s ease';
+          }, Math.random() * 500);
+        }
+      });
+    }
+
+    // Trigger number animation when metrics section is visible
+    const metricsSection = document.querySelector('#financials');
+    if (metricsSection) {
+      const metricsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateNumbers();
+            metricsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      metricsObserver.observe(metricsSection);
+    }
+  </script>
+</body>
+</html>
